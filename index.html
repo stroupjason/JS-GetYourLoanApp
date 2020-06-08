@@ -21,16 +21,81 @@
     <hr />
 
     <table>
+        <!--First of  Rows-->
         <tr>
             <td>Full name and title</td>
             <td colspan="3"><textarea name="inputLoanPurpose" id="inputName" size="25" rows="3" autocomplete="off" onkeyup="validateApplication();" onblur="validateApplication();"></textarea>
                 <br><label for="" id="inputNameValidation" style="display:none">Name is required</label>
             </td>
         </tr>
-
+        <!--Second Row of  Rows-->
+        <tr>
+            <td>Date of Birth</td>
+            <td><input type="text" name="inputDOBMonth" size="4" maxlength="2" placeholder="MM" autocomplete="off" onblur="validateApplication();"></td>
+            <td><input type="text" name="inputDOBDay" size="3" maxlength="2" placeholder="DD" autocomplete="off" onblur="validateApplication();"></td>
+            <td><input type="text" name="inputDOBYear" size="3" maxlength="4" placeholder="YYYY" autocomplete="off" onblur="validateApplication();"></td>
+        </tr>
+        <!--Third row of  Rows-->
+        <tr>
+            <td></td>
+            <td colspan="3">
+                <label for="" style="display:none">Date is required</label>
+            </td>
+        </tr>
+        <!--Fourth row of  Rows-->
+        <tr>
+            <td>Annual income</td>
+            <td colspan="3"><input name="inputAnnualIncome" id="inputAnnualIncome" size="25" rows="3" autocomplete="off" onkeyup="validateApplication();" onblur="validateApplication();">
+                <br><label for="" id="inputNameValidation" style="display:none;">Income is required</label>
+            </td>
+        </tr>
+        <!--Fifth row of  Rows-->
+        <tr>
+            <td> Check all that applies</td>
+            <td colspan="3">
+                <input type="checkbox" id="IsEmployed">I'm employed<br>
+                <input type="checkbox" id="hasKids">I have kids<br>
+                <input type="checkbox" id="hasLoans">I have other loans<br>
+                <input type="checkbox" id="hasCreditCards">I have multiple credit cards
+            </td>
+        </tr>
+        <!--Sixth row of  Rows-->
+        <tr>
+            <td colospan="4">
+                <!--thematic break between paragraph-level elements (scene change)-->
+                <hr />
+            </td>
+        </tr>
+        <!--Seventh row of  Rows-->
+        <tr>
+            <td>What wil you use this loan for?</td>
+            <td colspan="3"><textarea name="inputLoanPurpose" id="inputLoanPurpose" autocomplete="off" cols="27" rows="3" onkeyup="validateApplication();" onblur="validateApplication();"></textarea>
+                <br><label for="" id="inputLoanPurposeValidation" style="display:none;">Loan amount is required</label></td>
+        </tr>
+        <!--Eight row of  Rows-->
+        <tr>
+            <td>How much do you want to borrow?</td>
+            <td><input type="text" name="inputLoanAmount" id="inputLoanAmount" size="25" autocomplete="off" onkeyup="validateApplication();" onblur="validateApplication();">
+                <br><label for="" id="inputLoanAmountValidation" style="display:none">Loan amount is required</label>
+            </td>
+        </tr>
+        <!--Ninth row of  Rows-->
+        <tr>
+            <td colspan="4">
+                <!--thematic break between paragraph-level elements (scene change)-->
+                <hr />
+            </td>
+        </tr>
+        <!--Tenth row of  Rows-->
+        <tr>
+            <td><button onclick="clearApplication();">Clear</button></td>
+            <td colspan="2" />
+            <td><button onclick="saveApplication();">Apply</button></td>
+        </tr>
     </table>
 
-
+    <br>
+    <div id="riskSummary" formArrayName="riskSummary" class="border" style="display:none;"></div>
 
 </body>
 <script src="scripts/site.js"></script>
